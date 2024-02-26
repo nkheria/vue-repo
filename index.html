@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>First App</title>
+    <title>Vue Basics</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1> Welcome </h1>
+    <header>
+        <h1> VueJS Goals </h1>
+    </header>
 
-    <div id="app">
-        <div>
-            <label for="goal">Goal</label>
-            <input type="text" id="goal" v-model="enteredValue"/>
-            <button v-on:click="addGoal"> Add Goal </button>
-        </div>
-        <ul>
-            <li v-for="goal in goals">{{ goal }}</li>
-        </ul>
-    </div>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <section id="user-goal">
+        <h2> My Goals </h2>
+        <p>{{ outputGoal() }}</p>
+        <p> More Details about <s v-bind:href="vueLink"> VueJS </a></p>
+    </section>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
     <script src="app.js"></script>
 </html>
