@@ -38,3 +38,8 @@ li {
     padding: 1rem;
     border: 1px solid #ccc;
 }
+
+.active {
+    border-color: red;
+    background-color: aliceblue;
+}

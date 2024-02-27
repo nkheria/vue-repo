@@ -6,16 +6,16 @@
 </head>
 <body>
     <header>
-        <h1> VueJS Events</h1>
+        <h1> VUeJS Styling Example</h1>
     </header>
-    <section id="events">
-        <h2> Events Example </h2>
-        <button v-on:click="add(8)"> Add 8 </button>
-        <button v-on:click="reduce(3)"> Remove 3 </button>
-        <p> Result: {{counter}}</p>
-        <input type="text" v-model="name">
-        <p> Your Name: {{name}}</p>
-        <button v-on:click="resetInput"> Reset Input </button>
+    <section id="styling">
+        <div  
+        :class="divASelected ? 'demo active' : 'demo'" 
+        @click="divSelected('A')">
+    </div>
+        <div class="demo" @click="divSelected('B')"></div>
+        <div class="demo" @click="divSelected('C')"></div>
+
     </section>
     </body>
     <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>

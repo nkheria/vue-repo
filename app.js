@@ -1,29 +1,21 @@
 const app = Vue.createApp({
     data() {
         return {
-            counter: 10,
-            name: ''
-
+            divASelected: false,
+            divBSelected: false,
+            divCSelected: false,
         }
     },
     methods: {
-
-        resetInput() {
-            this.name = '';
-        },
-
-        setName(event,lastName) {
-            this.name = event.target.value;
-
-        },
-        add(num) {
-            this.counter = this.counter + num
-        },
-
-        reduce(num) {
-            this.counter = this.counter - num
+        divSelected(block) {
+            if (block === 'A'){
+                this.divASelected = true;
+            } else if (block === 'B'){
+                this.divBSelected = true;
+            } else if (block === 'C'){
         }
     }
+}
 });
 
-app.mount('#events')
+app.mount('#styling')
