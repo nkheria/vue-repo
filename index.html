@@ -6,14 +6,21 @@
 </head>
 <body>
     <header>
-        <h1> VueJS Goals </h1>
+        <h1> VueJS Events</h1>
     </header>
-
-    <section id="user-goal">
-        <h2> My Goals </h2>
-        <p>{{ outputGoal() }}</p>
-        <p> More Details about <s v-bind:href="vueLink"> VueJS </a></p>
+    <section id="events">
+        <h2> Events Example </h2>
+        <button v-on:click.right="add(8)"> Add 8 </button>
+        <button v-on:click="reduce(3)"> Remove 3 </button>
+        <p v-once> Starting Counter: {{counter}}</p>
+        <p> Result: {{counter}}</p>
+        <input type="text" v-on:input="setName($event,'Miller')" v-on:keyup.ctrl="confirmInput">
+        <p> Your Name: {{name}}</p>
+        <form v-on:submit.prevent="submitForm">
+            <input type="text" v-model="name">
+            <button type="submit">Submit</button>
     </section>
+    </body>
     <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
     <script src="app.js"></script>
 </html>

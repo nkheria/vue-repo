@@ -1,22 +1,33 @@
 const app = Vue.createApp({
     data() {
         return {
-            goalA: 'Finish the course and learn Vue!',
-            goalB: 'Master VueJS and build apps!',
-            vueLink: 'https://vuejs.org/'
-        };
-    },
-
-    methods: {
-        outputGoal() {
-            const randomNumber = Math.random();
-            if (randomNumber < 0.5) {
-                return this.goalA;
-            } else {
-                return this.goalB;
+            counter: 10,
+            name: '',
+            confirmedName: ''
         }
-    }
+    },
+    methods: {
+
+        confirmInput() {
+            this.confirmedName = this.name;
+        },
+
+        submitForm() {
+            alert('Submitted!')
+        },
+
+        setName(event,lastName) {
+            this.name = event.target.value + ' ' + lastName;
+
+        },
+        add(num) {
+            this.counter = this.counter + num
+        },
+
+        reduce(num) {
+            this.counter = this.counter - num
+        }
     }
 });
 
-app.mount('#user-goal')
+app.mount('#events')
