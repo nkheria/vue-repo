@@ -6,23 +6,13 @@
 </head>
 <body>
     <header>
-        <h1> VUeJS Goals</h1>
+        <h1> Social Directory </h1>
     </header>
-    <section id="user-goals">
-        <input type="text" v-model="enteredGoals">
-        <button @click="addGoal"> Add Goal </button>
-        <!-- <p v-show="goals.length === 0"> No goals have been added yet!</p> -->
-        <p v-if="goals.length === 0"> No goals have been added yet!</p>
-        <ul v-else>
-            <li v-for="(goal,index) in goals" @click="removeGoal(index)"> {{ goal }} - {{ index }} </li>
+    <section id="app">
+        <ul>
+            <friend-contact/>
+            <friend-contact/>
         </ul>
-        <!-- <ul>
-            <li v-for="(value,key) in {name: 'Max', age: 30, status: 'active'}"> {{ key }} : {{ value }} </li>
-        </ul> -->
-
-        <!-- <ul>
-            <li v-for="num in 10"> {{ num }} </li>
-        </ul> -->
     </section>
 
     </body>
