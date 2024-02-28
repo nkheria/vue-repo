@@ -11,10 +11,10 @@
     <section id="user-goals">
         <input type="text" v-model="enteredGoals">
         <button @click="addGoal"> Add Goal </button>
-        <!-- <p v-if="goals.length === 0"> No goals have been added yet!</p> -->
-        <p v-show="goals.length === 0"> No goals have been added yet!</p>
-        <ul v-show="goals.length > 0">
-            <li> Goal </li>
+        <!-- <p v-show="goals.length === 0"> No goals have been added yet!</p> -->
+        <p v-if="goals.length === 0"> No goals have been added yet!</p>
+        <ul v-else>
+            <li v-for="goal in goals"> {{ goal }} </li>
         </ul>
     </section>
 
