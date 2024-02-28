@@ -14,7 +14,7 @@
         <!-- <p v-show="goals.length === 0"> No goals have been added yet!</p> -->
         <p v-if="goals.length === 0"> No goals have been added yet!</p>
         <ul v-else>
-            <li v-for="(goal,index) in goals"> {{ goal }} - {{ index }} </li>
+            <li v-for="(goal,index) in goals" @click="removeGoal(index)"> {{ goal }} - {{ index }} </li>
         </ul>
         <!-- <ul>
             <li v-for="(value,key) in {name: 'Max', age: 30, status: 'active'}"> {{ key }} : {{ value }} </li>
