@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1> VUeJS Goals</h1>
+    </header>
+    <section id="user-goals">
+        <input type="text" v-model="enteredGoals">
+        <button @click="addGoal"> Add Goal </button>
+        <p v-if="goals.length === 0"> No goals have been added yet!</p>
+        <ul>
+            <li> Goal </li>
+        </ul>
+    </section>
+
+    </body>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</html>
