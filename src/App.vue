@@ -6,14 +6,16 @@
     <friend-contact 
       name="Manuel" 
       phone-number="9876543210" 
-      email-id= "manuel@example.com">
+      email-id= "manuel@example.com"
+      is-favourite="1">
       </friend-contact> 
   </li>
   <li> 
     <friend-contact 
       name="Julie" 
       phone-number="1233467890" 
-      email-id="julie@example.com">
+      email-id="julie@example.com"
+      is-favourite="0">
     </friend-contact>
   </li>
 
