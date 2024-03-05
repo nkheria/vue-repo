@@ -1,46 +1,28 @@
 <template>
-  <div>
-    <TheHeader/>
-    <badge-list></badge-list>
-    <user-info
-      :full-name="activeUser.name"
-      :info-text="activeUser.description"
-      :role="activeUser.role"
-    ></user-info>
-  </div>
+  <the-form></the-form>
 </template>
 
 <script>
-
-import TheHeader from './components/TheHeader.vue';
-import UserInfo from './components/UserInfo.vue';
-import BadgeList from './components/BadgeList.vue';
+import TheForm from './components/TheForm.vue';
 
 export default {
   components: {
-    TheHeader,
-    UserInfo,
-    BadgeList,
-  },
-
-  data() {
-    return {
-      activeUser: {
-        name: 'Maximilian Schwarzmüller',
-        description: 'Site owner and admin',
-        role: 'admin',
-      },
-    };
-  },
-};
+    TheForm
+  }  
+}
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: sans-serif;
 }
 
 body {
   margin: 0;
+  background-color: #292929;
 }
 </style>
