@@ -39,6 +39,7 @@
 </template>
 
 <script>
+// import axios from 'axios';
 export default {
   data() {
     return {
@@ -71,6 +72,13 @@ export default {
         rating: this.chosenRating,
       }),
     });
+
+    // 
+    // axios.post('https://new-vue-app-bfe08-default-rtdb.firebaseio.com/surveys.json', {
+    //   name: this.enteredName,
+    //   rating: this.chosenRating,
+    // });
+    // 
       this.enteredName = '';
       this.chosenRating = null;
     },
