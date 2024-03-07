@@ -1,12 +1,23 @@
 import { createApp } from 'vue';
-
-import BaseCard from './components/UI/BaseCard.vue';
-import BaseButton from './components/UI/BaseButton.vue';
+import { createStore} from 'vuex';
 import App from './App.vue';
 
+const store = createStore({
+    state() {
+        return {
+            counter: 0
+        };
+    },
+    mutations: {
+        increment(state) {
+            state.counter = state.counter + 2;
+        },
+        increase(state, payload) {
+            state.counter = state.counter + payload.value;
+        }
+    }
+});
 const app = createApp(App);
 
-app.component('base-card', BaseCard);
-app.component('base-button', BaseButton);
-
+app.use(store);
 app.mount('#app');

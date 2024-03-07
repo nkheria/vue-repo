@@ -1,33 +1,30 @@
 <template>
-  <learning-survey></learning-survey>
-  <user-experiences></user-experiences>
+  <base-container title="Vuex"></base-container>
+  <the-counter></the-counter>
+  <button @click="addOne"> Add 10</button>
+  <change-counter></change-counter>
 </template>
 
 <script>
-import LearningSurvey from './components/survey/LearningSurvey.vue';
-import UserExperiences from './components/survey/UserExperiences.vue';
-
+import BaseContainer from './components/BaseContainer.vue';
+import TheCounter from './components/TheCounter.vue';
+import ChangeCounter from './components/ChangeCounter.vue';
 export default {
   components: {
-    LearningSurvey,
-    UserExperiences,
+    BaseContainer,
+    TheCounter,
+    ChangeCounter
   },
-  // data() {
-  //   return {
-  //     savedSurveyResults: [],
-  //   };
-  // },
-  // methods: {
-  //   storeSurvey(surveyData) {
-  //     const surveyResult = {
-  //       name: surveyData.userName,
-  //       rating: surveyData.rating,
-  //       id: new Date().toISOString(),
-  //     };
-  //     this.savedSurveyResults.push(surveyResult);
-  //     console.log(surveyResult);
-  //   },
-  // },
+  methods: {
+    addOne() {
+      // this.$store.commit('increase', {value: 10});
+
+    this.$store.commit({
+      type: 'increase',
+      value: 10
+    });
+    },
+  },
 };
 </script>
 
